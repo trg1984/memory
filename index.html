@@ -1,0 +1,37 @@
+<html>
+    <head>
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/Memory.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/Memory.css" />
+	<script>
+	    $(document).ready(
+		function() {
+		    game = new Memory(
+			$('#placeholder'),
+			{
+			    // Use defaults.
+			}
+		    );
+		    
+		    var onInitialized = function() {
+			game.start();
+		    }
+		    
+		    game.initialize(onInitialized);
+		}
+	    );
+	</script>
+	<style>
+	    html, body {
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+	    }
+	</style>
+    </head>
+    <body>
+	<p style="height: 50px;" />
+	<center><div id="placeholder"></div></center>
+    </body>
+</html>
